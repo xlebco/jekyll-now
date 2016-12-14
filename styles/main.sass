@@ -2,23 +2,37 @@
 ---
 
 @import "bootstrap"
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700')
+
+$primary-padding: 50px
+$base-font: 16px
+
+body
+  font-family: 'Noto Sans'
 // header styling
 header
-  padding: 50px
+  padding: $primary-padding
 nav
-  font-size: 24px
+  font-size: $base-font * 1.5
   margin-top: 15.5px
   max-width: 300px
   display: flex
   justify-content: space-between
   svg
     transform: scale(1.5)
-
+// content section styling
+.nav-title
+  padding-left: $primary-padding
+  font-size: $base-font+2
+  font-weight: 700
+  line-height: 1.5
+  letter-spacing: 1px
+  margin-top: -22px
 
 // footer styling
 footer
   position: fixed
-  height: 50px
+  height: $primary-padding
   left: 0px
   bottom: 0
   width: 100%
