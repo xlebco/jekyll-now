@@ -13,28 +13,31 @@ body
 header
   padding: $primary-padding
 nav
+  display: flex
   font-size: $base-font * 1.5
+  justify-content: space-between
   margin-top: 15.5px
   max-width: 300px
-  display: flex
-  justify-content: space-between
   svg
     transform: scale(1.5)
 // content section styling
 .nav-title
-  padding-left: $primary-padding
+  border-bottom: 3px solid black
+  float: left
   font-size: $base-font+2
   font-weight: 700
-  line-height: 1.5
   letter-spacing: 1px
+  line-height: 1.5
+  margin-left: $primary-padding
   margin-top: -22px
+  padding-bottom: $primary-padding / 10
 
 // footer styling
 footer
-  position: fixed
+  bottom: 0
   height: $primary-padding
   left: 0px
-  bottom: 0
+  position: fixed
   width: 100%
 
 hr
@@ -43,8 +46,9 @@ hr
 .copyright
   color: rgba(156,153,153, 0.9)
   font-size: 12px
-  margin-top: 17px
   margin-left: 55px
+  margin-top: 17px
+
   a
     color: rgba(156,153,153, 0.9)
     &:hover
@@ -53,9 +57,9 @@ hr
 // svg styling
 .logo
   height:auto
-  width: 100%
-  max-width: 300px
   margin-top: -27px
+  max-width: 300px
+  width: 100%
 
 .logo-and
   fill: #ec1f27
