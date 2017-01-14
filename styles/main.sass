@@ -4,62 +4,143 @@
 @import "bootstrap"
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700')
 
-$primary-padding: 50px
+// Variables
+
 $base-font: 16px
+$break-small: 414px
+$break-super-small: 320px
+$primary-color: rgba(35,31,32, 0.9)
+$primary-padding: 56px
+$secondary-color: rgba(156,153,153, 0.9)
+$third-color: #ec1f27
+
+// global styling
 
 body
-  font-family: 'Noto Sans'
-// header styling
-header
+  box-sizing: border-box
+  color: $primary-color
+  font-family: Helvetica, 'Noto Sans'
+  font-size: $base-font
+  letter-spacing: 1px
+
+.wrapper
   padding: $primary-padding
+  padding-bottom: 0
+  @media screen and (max-width: $break-small)
+    padding: $primary-padding/1.5
+    padding-bottom: 0
+  @media screen and (max-width: $break-super-small)
+    padding: $primary-padding/2
+    padding-bottom: 0
+
+a
+  color: $primary-color
+  cursor:hand
+  &:hover, &:active, &:focus
+    color: $primary-color
+    font-weight: 700
+    text-decoration: none
+    transition: 0.3s ease-in-out
+  &:focus
+    color: $third-color
+
+// header styling
+
+header
+  margin-bottom: $primary-padding/2
+  @media screen and (max-width: $break-small)
+    margin-bottom: $primary-padding/3
+  @media screen and (max-width: $break-super-small)
+    margin-bottom: $primary-padding/4
+
+
 nav
   display: flex
   font-size: $base-font * 1.5
   justify-content: space-between
-  margin-top: 15.5px
-  max-width: 300px
+  max-width: 340px
   svg
+    fill: $primary-color
     transform: scale(1.5)
+
+.inactive
+  opacity: 0.6
+
+
 // content section styling
+
 .nav-title
-  border-bottom: 3px solid black
-  float: left
-  font-size: $base-font+2
+  border-bottom: 3px solid $primary-color
+  font-size: $base-font
   font-weight: 700
   letter-spacing: 1px
   line-height: 1.5
-  margin-left: $primary-padding
-  margin-top: -22px
-  padding-bottom: $primary-padding / 10
+  margin: 0
+  margin-bottom: $primary-padding/2
+  @media screen and (max-width: $break-small)
+    margin-bottom: $primary-padding/3
+  @media screen and (max-width: $break-super-small)
+    margin-bottom: $primary-padding/4
+
+.addresses
+  clear: both
+  font-size: 14px
+  margin-bottom: $primary-padding/2
+  @media screen and (max-width: $break-small)
+    margin-bottom: $primary-padding/3
+  @media screen and (max-width: $break-super-small)
+    margin-bottom: $primary-padding/4
+
+
+li
+  margin: 0
+  margin-bottom: $primary-padding/3
+  @media screen and (max-width: $break-small)
+    margin-bottom: $primary-padding/4
+
+.address-details
+  margin: $primary-padding/7
+  margin-right: 0
+  li
+    margin-bottom: $primary-padding/14
+    &:last-child
+      margin-bottom: 0
+
+
 
 // footer styling
 footer
+  background-color: white
   bottom: 0
   height: $primary-padding
   left: 0px
+  padding: 0 $primary-padding
   position: fixed
   width: 100%
 
+
 hr
-  margin: 0 50px
+  margin: 0
+  margin-bottom: $primary-padding/4
 
 .copyright
-  color: rgba(156,153,153, 0.9)
+  color: $secondary-color
   font-size: 12px
-  margin-left: 55px
-  margin-top: 17px
-
   a
-    color: rgba(156,153,153, 0.9)
-    &:hover
-      text-decoration: underline
+    color: $secondary-color
 
 // svg styling
 .logo
+  fill: $primary-color
   height:auto
-  margin-top: -27px
-  max-width: 300px
+  margin-bottom: $primary-padding/2
+  margin-top: -44px
+  max-width: 340px
   width: 100%
+  @media screen and (max-width: $break-small)
+    margin-bottom: $primary-padding/3
+  @media screen and (max-width: $break-super-small)
+    margin-bottom: $primary-padding/4
 
 .logo-and
-  fill: #ec1f27
+  fill: $third-color
