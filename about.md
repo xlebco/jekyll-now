@@ -1,15 +1,21 @@
 ---
 layout: page
-title: About
+title: О нас
 permalink: /about/
 ---
 
-Some information about you!
+<article class="content">
+  <p>
+    Хлеб&Co предлагает покупателям более <span class="highlighted">20 сортов свежего хлеба</span>, от традиционных до деликатесных, изготовленных исключительно из натуральных, тщательно отобранных ингредиентов.
+  </p>
+  <p>
+    Выпекаемый по <span class="highlighted">классическим и оригинальным рецептам</span>, хлеб доставляется в магазины два раза в день, что позволяет нам быть уверенными - хлеб за вашим столом всегда будет свежим.
+  </p>
+  <p>
+    Наши пекарни работают всю ночь, чтобы к утру доставить в магазины свежие <span class="highlighted">круассаны, тарталетки, улитки и булочки</span>.
+  </p>
+  <p>
+    Насладитесь нашей выпечкой и чашкой <span class="highlighted">свежесваренного ароматного кофе</span> в нашем кафе, либо возьмите их с собой на работу.
+  </p>
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+</article>
