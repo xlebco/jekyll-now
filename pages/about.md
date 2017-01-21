@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: default
 title: О нас
-permalink: /about/
+permalink: /about
 ---
 
 <article class="content">
