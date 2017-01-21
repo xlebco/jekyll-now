@@ -6,7 +6,7 @@ permalink: /about
 
 <div class="row">
   <div class="col-sm-6">
-    <h2 class="nav-title pull-left">О нас</h2>
+    <h2 class="nav-title pull-left">Булочные и кондитерские</h2>
     <article class="content">
       <p>
         Хлеб&Co предлагает покупателям более <span class="highlighted">20 сортов свежего хлеба</span>, от традиционных до деликатесных, изготовленных исключительно из натуральных, тщательно отобранных ингредиентов.

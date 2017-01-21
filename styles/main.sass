@@ -76,6 +76,36 @@ a.nav-item
 
 // content section styling
 
+.addresses, .content
+  clear: both
+  font-size: 14px
+  margin-bottom: $primary-padding/2
+  @media screen and (max-width: $break-small)
+    margin-bottom: $primary-padding/3
+  @media screen and (max-width: $break-super-small)
+    margin-bottom: $primary-padding/4
+  max-width: 340px
+
+.address-details
+  margin: $primary-padding/7
+  margin-right: 0
+  li
+    margin-bottom: $primary-padding/14
+    &:last-child
+      margin-bottom: 0
+
+.highlighted
+  color: $third-color
+
+
+li
+  margin: 0
+  margin-bottom: $primary-padding/3
+  @media screen and (max-width: $break-small)
+    margin-bottom: $primary-padding/4
+
+
+
 .nav-title
   border-bottom: 3px solid $primary-color
   font-size: $base-font
@@ -88,32 +118,6 @@ a.nav-item
     margin-bottom: $primary-padding/3
   @media screen and (max-width: $break-super-small)
     margin-bottom: $primary-padding/4
-
-.addresses, .content
-  clear: both
-  font-size: 14px
-  margin-bottom: $primary-padding/2
-  @media screen and (max-width: $break-small)
-    margin-bottom: $primary-padding/3
-  @media screen and (max-width: $break-super-small)
-    margin-bottom: $primary-padding/4
-  max-width: 340px
-
-
-li
-  margin: 0
-  margin-bottom: $primary-padding/3
-  @media screen and (max-width: $break-small)
-    margin-bottom: $primary-padding/4
-
-.address-details
-  margin: $primary-padding/7
-  margin-right: 0
-  li
-    margin-bottom: $primary-padding/14
-    &:last-child
-      margin-bottom: 0
-
 
 
 // footer styling
