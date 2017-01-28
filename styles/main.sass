@@ -16,6 +16,17 @@ $third-color: #ec1f27
 
 // global styling
 
+a
+  color: $primary-color
+  cursor:hand
+  &:hover, &:active, &:focus
+    color: $primary-color
+    font-weight: 700
+    text-decoration: none
+    transition: 0.3s ease-in-out
+  &:focus
+    color: $third-color
+
 body
   box-sizing: border-box
   color: $primary-color
@@ -33,16 +44,6 @@ body
     padding: $primary-padding/2
     padding-bottom: 0
 
-a
-  color: $primary-color
-  cursor:hand
-  &:hover, &:active, &:focus
-    color: $primary-color
-    font-weight: 700
-    text-decoration: none
-    transition: 0.3s ease-in-out
-  &:focus
-    color: $third-color
 
 h3
   color: $primary-color
@@ -51,13 +52,15 @@ h3
 
 // header styling
 
+a.nav-item
+  height: 24px
+
 header
   margin-bottom: $primary-padding/2
   @media screen and (max-width: $break-small)
     margin-bottom: $primary-padding/3
   @media screen and (max-width: $break-super-small)
     margin-bottom: $primary-padding/4
-
 
 nav
   display: flex
@@ -76,13 +79,7 @@ nav
   opacity: 1
   pointer-events: none
 
-a.nav-item
-  height: 24px
-
 // content section styling
-
-main
-  margin-bottom: $primary-padding
 
 .addresses, .content, .contacts
   clear: both
@@ -107,9 +104,9 @@ main
   &:last-of-type
     margin-bottom: $primary-padding/4
 
-.highlighted
+.highlight
   color: $third-color
-
+  font-weight: 700
 
 li
   margin: 0
@@ -117,7 +114,8 @@ li
   @media screen and (max-width: $break-small)
     margin-bottom: $primary-padding/4
 
-
+main
+  margin-bottom: $primary-padding
 
 .nav-title
   border-bottom: 3px solid $primary-color
@@ -132,8 +130,18 @@ li
   @media screen and (max-width: $break-super-small)
     margin-bottom: $primary-padding/4
 
+.text-highlight
+  color: $third-color
+
 
 // footer styling
+
+.copyright
+  color: $secondary-color
+  font-size: 12px
+  a
+    color: $secondary-color
+
 footer
   background-color: white
   bottom: 0
@@ -150,13 +158,8 @@ hr
   margin: 0
   margin-bottom: $primary-padding/4
 
-.copyright
-  color: $secondary-color
-  font-size: 12px
-  a
-    color: $secondary-color
-
 // svg styling
+
 .logo
   fill: $primary-color
   height:auto
