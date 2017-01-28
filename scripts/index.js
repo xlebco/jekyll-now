@@ -13,6 +13,8 @@ addressesLinks.forEach(block => block.addEventListener('click', toggleHidden));
 function toggleHidden () {
 
 const addressDetails = this.nextElementSibling;
+const address = this;
+address.classList.toggle('active');
 addressDetails.classList.toggle('hidden');
 
 }
