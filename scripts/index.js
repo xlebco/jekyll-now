@@ -1,24 +1,33 @@
 // select all address-details and add click listener to them
 var addressesLinks = document.querySelectorAll('.js-address');
-
-
-addressesLinks.forEach(function (block) {
-  block.addEventListener("click", function(event){
-    //prevents from moving page up upon click on a link
-    event.preventDefault();
-}
-);} );
-addressesLinks.forEach(function (block) {
-  block.addEventListener('click', toggleHidden);});
+var addressDetailsBlocks = document.querySelectorAll('.js-address-details');
 
 
 // show and hide address-details on click
+addressesLinks.forEach(function (block) {
+  block.addEventListener('click', toggleHidden);});
 
-function toggleHidden () {
+function toggleHidden() {
 
-var addressDetails = this.nextElementSibling;
-var address = this;
-address.classList.toggle('active');
-addressDetails.classList.toggle('hidden');
+  event.preventDefault();
+  removeAll();
+  var addressDetails = this.nextElementSibling;
+  var address = this;
+  address.classList.toggle('active');
+  addressDetails.classList.toggle('hidden');
+
+}
+
+// remove active class from all links
+//add hidden class to all address-details
+
+function removeAll () {
+
+  addressesLinks.forEach(function(link){
+    link.classList.remove('active');
+  });
+  addressDetailsBlocks.forEach(function(block){
+    block.classList.add('hidden');
+  });
 
 }
