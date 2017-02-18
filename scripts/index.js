@@ -19,7 +19,7 @@ function toggleHidden (event) {
   address.classList.toggle('active');
   addressDetails.classList.toggle('hidden');
   addressDetails.classList.remove('js-current');
-};
+  }
 
 // remove active class from all links
 //add hidden class to all address-details
