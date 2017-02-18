@@ -99,6 +99,8 @@ nav
 .addresses > li
   margin-bottom: $primary-padding/4
 
+
+
 .address-details, .contacts-details
   margin: $primary-padding/7
   margin-right: 0
@@ -106,8 +108,20 @@ nav
     margin-bottom: $primary-padding/14
 
 .address-details > li
+  opacity: 0
+
+  @for $i from 1 through 4
+    &:nth-child(#{$i})
+      animation:
+        name: address
+        duration: 300ms * $i
+        timing-function: ease-in-out
+        fill-mode: forwards
   &:last-of-type
     margin-bottom: $primary-padding/4
+
+.address-details > li:nth-child(3)
+  margin-bottom: $primary-padding/4
 
 li
   margin: 0
@@ -225,3 +239,13 @@ hr
   letter-spacing: 2px
   &:hover
     opacity: 0.8
+
+
+//Keyframes
+
+@keyframes address
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
