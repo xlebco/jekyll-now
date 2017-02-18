@@ -109,7 +109,7 @@ nav
 .address-details > li
   opacity: 0
 
-  @for $i from 1 through 4
+  @for $i from 2 through 4
     &:nth-child(#{$i})
       animation:
         name: address
@@ -118,7 +118,8 @@ nav
         fill-mode: forwards
   &:last-of-type
     margin-bottom: $primary-padding/4
-
+.address-details > li:first-child
+  opacity: 1
 .address-details > li:nth-child(3)
   margin-bottom: $primary-padding/4
 
