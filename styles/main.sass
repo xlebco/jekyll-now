@@ -258,6 +258,8 @@ hr
   margin-bottom: $primary-padding/4
   outline: none
   width: 100%
+  @at-root .bg-video ~ .wrapper #{&}:not(.button)
+    background-color: transparent
 
 .mc-field::-webkit-input-placeholder
   font-family: Helvetica, 'Noto Sans'
