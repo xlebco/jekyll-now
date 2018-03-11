@@ -83,6 +83,10 @@ a.nav-item:hover
   &:before,
   &:after
     display: none
+  .nav-item
+    @media screen and (min-width: $break-super-small + 1)
+      flex: 1
+
   a.nav-item
     height: auto
 
