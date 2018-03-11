@@ -14,6 +14,10 @@ $primary-padding: 56px
 $secondary-color: rgba(156,153,153, 0.9)
 $third-color: #ec1f27
 
+html,
+body
+  height: 100%
+
 // global styling
 
 a
@@ -34,9 +38,23 @@ body
   font-size: $base-font
   letter-spacing: 1px
 
+.bg-video
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  left: 0
+  video
+    width: 100%
+    height: 100%
+    object-fit: cover
+
 .wrapper
+  min-height: 100%
   padding: $primary-padding
   padding-bottom: 0
+  position: relative
+  box-sizing: border-box
   @media screen and (max-width: $break-small)
     padding: $primary-padding/1.5
     padding-bottom: 0
@@ -56,8 +74,17 @@ a.nav-item
   height: 24px
 
 a.nav-item:hover
-  transform: scale(1.1)
-  transition: 0.5s cubic-bezier(0.88, -0.16, 1, 1) 0.2s
+  font-weight: normal
+  svg
+    transform: scale(1.65)
+
+.main-nav
+  font-size: 13px
+  &:before,
+  &:after
+    display: none
+  a.nav-item
+    height: auto
 
 header
   margin-bottom: $primary-padding/2
@@ -74,16 +101,21 @@ nav
   svg
     fill: $primary-color
     transform: scale(1.5)
+    transition: 0.5s cubic-bezier(0.88, -0.16, 1, 1) 0.2s
 
 .nav-item
   opacity: 0.6
+  text-align: center
+
+.nav-item-text
+  margin-top: 8px
+  display: block
 
 .not-active
   cursor: default
   opacity: 1
   transition: 3s ease-in-out
   pointer-events: none
-
 // content section styling
 
 .active
@@ -135,7 +167,7 @@ li
     margin-bottom: $primary-padding/4
 
 main
-  margin-bottom: $primary-padding
+  padding-bottom: $primary-padding
 
 .nav-title
   border-bottom: 3px solid $primary-color
@@ -163,13 +195,14 @@ main
     color: $secondary-color
 
 footer
-  background-color: white
   bottom: 0
   height: $primary-padding
   left: 0px
   padding: 0 $primary-padding
-  position: fixed
+  position: absolute
   width: 100%
+  hr
+    border-top: 1px solid rgba(#000, .1)
   @media screen and (max-width: $break-small)
     height: $primary-padding/2
 
@@ -193,7 +226,10 @@ hr
     margin-bottom: $primary-padding/4
 
 .logo-and
-  fill: $third-color
+  transition: .8s ease-in-out
+
+  html.is-loaded &
+    fill: $third-color
 
 // news page styling
 
@@ -254,9 +290,6 @@ hr
   transition: 0.6s ease-in-out
   &:hover
     box-shadow: 0px 10px 15px -5px rgba(100,100,100,0.4)
-
-
-
 
 
 //Keyframes
